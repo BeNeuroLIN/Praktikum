@@ -10,7 +10,7 @@ You will need to install 2 environments in miniconda for your analysis scripts (
 ### Install an environment from a yml file into anaconda
 #### Sleep_env
 Open miniconda and navigate to the folder that holds the **sleep_environment.yml** file from Github: ```cd C:\Users\yourfilepath``` <br/>
-In minconda: ```conda create --file sleep_environment.yml```. <br/>
+In minconda: ```conda env create --file environment.yml```. <br/>
 To activate the environment ```conda activate sleep_env```.<br/>
 Check the installed packages ```conda list```.<br/>
 Start Jupyter lab through miniconda ```jupyter lab```. It will open in the Browser. Navigate through the folder structure to your code.<br/>
