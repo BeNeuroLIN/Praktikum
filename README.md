@@ -6,7 +6,7 @@ After the sleep deprivation experiments are completed, copy the data onto the ha
 ## Preparation
 Download all these Github scripts onto your laptop.<br/>
 Matlab, Miniconda and PyCharm should be installed on your Computers.<br/>
-You will need to install 2 environments in miniconda for your analysis scripts (sleep_environment.yml and OMR.yml).<br/>
+You will need to install 2 environments in miniconda for your analysis scripts (sleep_environment.yml and OMR.yml). More info [here](url). <br/>
 ### Install an environment from a yml file into anaconda
 #### Sleep_env
 Open miniconda and navigate to the folder that holds the **sleep_environment.yml** file from Github: ```cd C:\Users\yourfilepath``` <br/>
