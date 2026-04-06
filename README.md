@@ -21,7 +21,7 @@ Check the installed packages ```conda list```.<br/>
 
 
 ## Sleep Analysis
-### Matlab
+### MATLAB
 Start with the Matlab script to analyse the fish's sleep and waking activity throughout the night and day.<br/>
 First, from the Sleep Analysis - Matlab folder, run ["LocmotionAnalyses_Practical.m"](url) in Matlab.<br/>
 In the script, go through sections 1-9, one by one. You can run them individually by clicking "run section" in the Editor tab in Matlab.<br/>
@@ -34,8 +34,25 @@ You will need to check the followng parameters in the code before running it:<br
   Section8: Save all plots on the hard drive.<br/>
   Section9: Save all plots on the hard drive.<br/>
 
+Please share all folders (including all MATLAB-generated csv files) with all other groups, so that you can plot sleep and waking activity against the control group for better comparison.<br/>
+
 ### Jupyter Lab
 Start miniconda, activate your sleep_environment and start Jupyter Lab.<br/>
+
+
+
+## Optomotor response (OMR) Anaysis
+### PyCharm
+#### Exp_info.py
+Make sure every group has data from the control group and one treatment group. Please analyse and compare the control against one treatment group.
+Copy exp_info.py from Github into the folder containing your raw OMR data. Open the file using PyCharm.<br/>
+Determine the python interpreter for the project: <br/>
+  Click on the four lines in the top left corner --> Settings --> Project 2.OMR_anaysis -->Python Interpreter --> Add interpreter --> Local Interpreter -->conda environment --> Under "Use existing environment": select the OMR environment
+Adjust the **date**, **animals** and **trials** in the exp_info file. <br/>
+Sort the fish into the correct treatment groups. The numbering starts with 0.<br/>
+Run the file under right click --> **RUn**.<br/>
+Copy the **codes** folder into the same directory as your OMR folder. Run 
+
 
 
 
