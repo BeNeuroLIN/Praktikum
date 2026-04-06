@@ -1,7 +1,7 @@
 # Praktikum
-Scripts needed for the Optomotor response practical
+Scripts needed for the Optomotor response practical.
 
-After the sleep deprivation experiments are completed, copy the data onto the hard drive.
+After each experiment iscompleted, copy the data onto the hard drive. Make sure every group has a complete data set. <br/>
 
 ## Preparation
 Download all these Github scripts onto your laptop.<br/>
@@ -49,9 +49,17 @@ Copy exp_info.py from Github into the folder containing your raw OMR data. Open 
 Determine the python interpreter for the project: <br/>
   Click on the four lines in the top left corner --> Settings --> Project 2.OMR_anaysis -->Python Interpreter --> Add interpreter --> Local Interpreter -->conda environment --> Under "Use existing environment": select the OMR environment
 Adjust the **date**, **animals** and **trials** in the exp_info file. <br/>
-Sort the fish into the correct treatment groups. The numbering starts with 0.<br/>
+Sort the fish into the correct **treatment groups**. The numbering starts with 0.<br/>
 Run the file under right click --> **RUn**.<br/>
-Copy the **codes** folder into the same directory as your OMR folder. Run 
+
+Copy the **codes** folder into the same directory as your OMR folder.
+#### Analysis_bout_rate_turning_angle
+Open Analysis_bout_rate_turning_angle in PyCharm. Ensure the OMR environment is selected. <br/>
+In line *454*, under main, paste the folder containing the raw data. Run the script and check the newly created plots in the experiment folder. <br/>
+
+Run **Analysis_correctness** and **Analysis_time** in the same manner.
+Compare your plots with your peers.
+
 
 
 
