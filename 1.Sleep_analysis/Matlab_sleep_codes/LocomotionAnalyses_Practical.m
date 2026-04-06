@@ -157,3 +157,64 @@ T_f = struct2table(f, 'AsArray', 1);
 csvwrite('output_binned_rest_ctrl.csv', T_f.rest{1}); % ctrl
 csvwrite('output_binned_wakeAct_ctrl.csv', T_f.wakeAct{1}); % ctrl
 csvwrite('output_binned_act_ctrl.csv', T_f.activity{1}); % ctrl
+
+
+%% 10a. Split motion data into phases for bar plots
+
+d_day0 = d96(frame_day0:(frame_night1-1), :); 
+d_night1 = d96(frame_night1:(frame_day1-1), :);
+d_day1 = d96(frame_day1:(frame_testphase-1), :);  %for rebound
+d_testphase = d96(frame_testphase:(frame_night2-1), :);
+
+
+%% 10b. Repeat all steps of d96 with d_night, d_day1 and d_testphase for bar plots
+% and save data for further analysis in python
+
+% Bin activity & rest
+clear b t a 
+b = 1; % binlength in minutes to convert pixel data to seconds with motion
+t = 2; % threshold how many pixels represent a real movement, rather than noise
+
+a_day0 = fct_BinActivity(d_day0,b,threshold,framerate);
+a_night1 = fct_BinActivity(d_night1,b,threshold,framerate); % might have to change cut offs
+a_day1 = fct_BinActivity(d_day1,b,threshold,framerate);
+a_testphase = fct_BinActivity(d_testphase,b,threshold,framerate);
+
+% use function fct_crSleepPlots to get desired parameters
+% save data as csv
+
+a = a_day0
+f = fct_crSleepPlots(a,geno,expName);
+
+T_f = struct2table(f, 'AsArray', 1);
+csvwrite('output_binned_rest_day0.csv', T_f.rest{1}); 
+csvwrite('output_binned_wakeAct_day0.csv', T_f.wakeAct{1}); 
+csvwrite('output_binned_act_day0.csv', T_f.activity{1});
+
+
+a = a_night1
+f = fct_crSleepPlots(a,geno,expName);
+
+T_f = struct2table(f, 'AsArray', 1);
+csvwrite('output_binned_rest_night1.csv', T_f.rest{1}); 
+csvwrite('output_binned_wakeAct_night1.csv', T_f.wakeAct{1}); 
+csvwrite('output_binned_act_night1.csv', T_f.activity{1});
+
+
+a = a_day1
+f = fct_crSleepPlots(a,geno,expName);
+
+T_f = struct2table(f, 'AsArray', 1);
+csvwrite('output_binned_rest_day1.csv', T_f.rest{1}); 
+csvwrite('output_binned_wakeAct_day1.csv', T_f.wakeAct{1}); 
+csvwrite('output_binned_act_day1.csv', T_f.activity{1});
+
+
+a = a_testphase
+f = fct_crSleepPlots(a,geno,expName);
+
+T_f = struct2table(f, 'AsArray', 1);
+csvwrite('output_binned_rest_testphase.csv', T_f.rest{1}); 
+csvwrite('output_binned_wakeAct_testphase.csv', T_f.wakeAct{1}); 
+csvwrite('output_binned_act_testphase.csv', T_f.activity{1});
+
