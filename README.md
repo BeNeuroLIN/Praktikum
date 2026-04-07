@@ -39,7 +39,7 @@ Please share all folders (including all MATLAB-generated csv files) with all oth
 
 ### Jupyter Lab
 Start miniconda, activate your sleep_environment and start Jupyter Lab.<br/>
-Run the code cell by cell and change folders where needed. <br/>
+Run the code cell by cell and change folders where needed: Below the cell called "Check binning parameters, groups and folder paths here!" <br/>
 
 
 
