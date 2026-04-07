@@ -33,11 +33,13 @@ You will need to check the followng parameters in the code before running it:<br
   Section7: put in the number of animals from your experimental group.<br/>
   Section8: Save all plots on the hard drive.<br/>
   Section9: Save all plots on the hard drive.<br/>
+  Before proceeding with the next group, clear the the work space and the command window: ```clear``` and ```clc``` in the Command Window.<br/>
 
 Please share all folders (including all MATLAB-generated csv files) with all other groups, so that you can plot sleep and waking activity against the control group for better comparison.<br/>
 
 ### Jupyter Lab
 Start miniconda, activate your sleep_environment and start Jupyter Lab.<br/>
+Run the code cell by cell and change folders where needed. <br/>
 
 
 
