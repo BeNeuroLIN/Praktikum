@@ -55,9 +55,9 @@ Sort the fish into the correct **treatment groups**. The numbering starts with 0
 Run the file under right click --> **RUn**.<br/>
 
 Copy the **codes** folder into the same directory as your OMR folder.
-#### Analysis_bout_rate_turning_angle
+#### Analysis_dir_extra_incl_lineplot
 Open Analysis_bout_rate_turning_angle in PyCharm. Ensure the OMR environment is selected. <br/>
-In line *454*, under main, paste the folder containing the raw data. Run the script and check the newly created plots in the experiment folder. <br/>
+In line *519*, under main, paste the folder containing the raw data. Run the script and check the newly created plots in the experiment folder. <br/>
 
 Run **Analysis_correctness** and **Analysis_time** in the same manner.
 Compare your plots with your peers.
