@@ -61,7 +61,7 @@ Open ["Analysis_dir_extra_incl_lineplot_3groups"](https://github.com/BeNeuroLIN/
 In line *519*, under main, paste the folder containing the  data. Run the script and check the newly created plots in the experiment folder. <br/>
 ```if __name__ == '__main__': experiment = '2026_04_21_lightpulses'```
 
-Run **Analysis_correctness** and **Analysis_time** in the same manner, by only changing the *experiment* file name under "main".<br/>
+Run [**Analysis_correctness**](https://github.com/BeNeuroLIN/Praktikum/blob/main/2.OMR_analysis/analysis_correctness_scatter_3groups.py) and [**Analysis_time**](https://github.com/BeNeuroLIN/Praktikum/blob/main/2.OMR_analysis/analysis_time_all_scatter_3groups.py) in the same manner, by only changing the *experiment* file name under "main".<br/>
 Compare your plots with your peers.
 
 
