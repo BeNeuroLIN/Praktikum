@@ -1,10 +1,10 @@
 # Praktikum
 Scripts needed for the Optomotor response practical.
 
-After each experiment iscompleted, copy the data onto the hard drive. Make sure every group has a complete data set. <br/>
+After each experiment is completed, copy the data onto the hard drive. Make sure every group has a complete data set. <br/>
 
 ## Preparation
-Download all these Github scripts onto your laptop.<br/>
+Download all these Github  scripts onto your laptop.<br/>
 Matlab, Miniconda and PyCharm should be installed on your Computers.<br/>
 You will need to install 2 environments in miniconda for your analysis scripts (sleep_environment.yml and OMR.yml). More info [here](url). <br/>
 ### Install an environment from a yml file into anaconda
