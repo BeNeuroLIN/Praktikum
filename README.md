@@ -59,8 +59,8 @@ Copy the **codes** folder into the same directory as your OMR folder. This is es
 #### Analysis_dir_extra_incl_lineplot
 Open Analysis_bout_rate_turning_angle in PyCharm. Ensure the **OMR environment** is selected. <br/>
 In line *519*, under main, paste the folder containing the raw data. Run the script and check the newly created plots in the experiment folder. <br/>
-'''if __name__ == '__main__':
-    experiment = '2026_04_21_lightpulses''''
+```if __name__ == '__main__':
+    experiment = '2026_04_21_lightpulses'```
 
 Run **Analysis_correctness** and **Analysis_time** in the same manner, by only changing the *experiment* file name. <br\>
 Compare your plots with your peers.
