@@ -17,8 +17,8 @@ def main():
     fish = [12]
     trials = 30
 
-    control = [8,9,10,11]
-    sleep_1 = [0,1,2,3]  # 1h light pulse, 2500lux, 12AM-1AM
+    control = [8,9,10,11] # control
+    sleep_1 = [0,1,2,3]  # light pulses
     sleep_2 = [4,5,6,7] #continuous light
 
 

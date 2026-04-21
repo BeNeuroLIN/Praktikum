@@ -238,7 +238,7 @@ def plotHistogram(experiment, num_bins, prob=False):
         f, ax = plt.subplots()
 
         ax.plot(angles, data_1[stimulus], label='control', color = 'black')
-        ax.plot(angles, data_2[stimulus], label='1h light pulse', color = 'pink')
+        ax.plot(angles, data_2[stimulus], label='light pulses', color = 'green')
         ax.plot(angles, data_2[stimulus], label='continuous light', color='red')
         
         plt.fill_between(angles, \
@@ -249,7 +249,7 @@ def plotHistogram(experiment, num_bins, prob=False):
         plt.fill_between(angles, \
             data_2[stimulus]-sem_2[stimulus], \
             data_2[stimulus]+sem_2[stimulus], \
-            color='pink', alpha=0.5)
+            color='green', alpha=0.5)
 
         plt.fill_between(angles, \
                          data_3[stimulus] - sem_3[stimulus], \
@@ -301,13 +301,13 @@ def plotHistogram(experiment, num_bins, prob=False):
         f, ax = plt.subplots()
         
         ax.plot(angles, data_1[stimulus], label='control', color = 'black')
-        ax.plot(angles, data_2[stimulus], label='1h light pulse', color = 'pink' )
+        ax.plot(angles, data_2[stimulus], label='light pulses', color = 'green' )
         ax.plot(angles, data_3[stimulus], label='continuous', color='red')
         
         plt.fill_between(angles, \
             data_1[stimulus]-sem_1[stimulus], \
             data_1[stimulus]+sem_1[stimulus], \
-            color='pink', alpha=0.5)
+            color='green', alpha=0.5)
 
         plt.fill_between(angles, \
             data_2[stimulus]-sem_2[stimulus], \
@@ -365,7 +365,7 @@ def boutFrequency(experiment, num_bins):
     f, ax = plt.subplots()
 
     ax.bar([e + 1. for e in list(x_range)], freq_1, yerr=sem_1, capsize=5.0, label='control', alpha=0.5, width=0.4, color = 'grey')
-    ax.bar([e + 1.4 for e in list(x_range)], freq_2, yerr=sem_2, ecolor='grey', capsize=3.0, alpha=0.7, label='1h light pulse', width=0.4, color = 'pink')
+    ax.bar([e + 1.4 for e in list(x_range)], freq_2, yerr=sem_2, ecolor='grey', capsize=3.0, alpha=0.7, label='light pulses', width=0.4, color = 'green')
     ax.bar([e + 1.8 for e in list(x_range)], freq_3, yerr=sem_3, ecolor='grey', capsize=3.0, alpha=0.7,
            label='continuous', width=0.4, color='red')
 
@@ -376,7 +376,7 @@ def boutFrequency(experiment, num_bins):
 
         dots = ax.scatter(x_1, raw_1[:,i], color = 'grey')
         jitter_dots(dots)
-        dots = ax.scatter(x_2, raw_2[:,i], color = 'pink')
+        dots = ax.scatter(x_2, raw_2[:,i], color = 'green')
         jitter_dots(dots)
         dots = ax.scatter(x_3, raw_3[:, i], color='red')
         jitter_dots(dots)
@@ -440,7 +440,7 @@ def boutFrequency(experiment, num_bins):
     f, ax = plt.subplots()
 
     ax.bar([e + 1. for e in list(x_range)], freq_1, yerr=sem_1, label='control', alpha=0.5, width=0.4, color = 'grey')
-    ax.bar([e + 1.4 for e in list(x_range)], freq_2, yerr=sem_2, alpha=0.7, label='1h light pulse', width=0.4, color = 'pink')
+    ax.bar([e + 1.4 for e in list(x_range)], freq_2, yerr=sem_2, alpha=0.7, label='light pulses', width=0.4, color = 'green')
     ax.bar([e + 1.8 for e in list(x_range)], freq_3, yerr=sem_3, alpha=0.7, label='continuous', width=0.4,
            color='red')
 
@@ -450,7 +450,7 @@ def boutFrequency(experiment, num_bins):
         x_3 = [i + 1.8] * raw_3.shape[0]
 
         ax.scatter(x_1, raw_1[:,i], color = 'grey')
-        ax.scatter(x_2, raw_2[:,i], color = 'pink')
+        ax.scatter(x_2, raw_2[:,i], color = 'green')
         ax.scatter(x_3, raw_3[:, i], color='red')
     
     ax.set_xlabel('Stimulus')
@@ -477,8 +477,8 @@ def boutFrequency(experiment, num_bins):
     f, ax = plt.subplots()
 
     ax.errorbar(x_range, freq_1[:4], yerr=sem_1, label='control', marker='o', markersize=2.0, color='black')
-    ax.errorbar(x_range, freq_2[:4], yerr=sem_2, label='1h light pulse', marker='o', markersize=2.0,
-                color='pink')
+    ax.errorbar(x_range, freq_2[:4], yerr=sem_2, label='light pulses', marker='o', markersize=2.0,
+                color='green')
     ax.errorbar(x_range, freq_3[:4], yerr=sem_3, label='continuous', marker='o', markersize=2.0,
                 color='red')
 
@@ -490,7 +490,7 @@ def boutFrequency(experiment, num_bins):
 
         dots = ax.scatter(x_1, raw_1[:,i], color = 'grey', alpha = 0.2)
         jitter_dots(dots, base_x=x_1 - offset)
-        dots = ax.scatter(x_2, raw_2[:,i], color = 'pink', alpha = 0.2)
+        dots = ax.scatter(x_2, raw_2[:,i], color = 'green', alpha = 0.2)
         jitter_dots(dots, base_x=x_2)
         dots = ax.scatter(x_3, raw_3[:, i], color='red', alpha=0.2)
         jitter_dots(dots, base_x=x_3 + offset)

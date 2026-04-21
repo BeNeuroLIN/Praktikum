@@ -225,7 +225,7 @@ def plotHistogram(experiment, num_bins):
     print(data_1[:4])
         
     ax.errorbar(x_range, data_1[:4], yerr=sem_1, label='control', marker='o', markersize=2.0, color = 'black')
-    ax.errorbar(x_range, data_2[:4], yerr=sem_2, label='1h light pulse, 2500lux', marker='o', markersize=2.0, color = 'pink' )
+    ax.errorbar(x_range, data_2[:4], yerr=sem_2, label='light pulses', marker='o', markersize=2.0, color = 'green' )
     ax.errorbar(x_range, data_3[:4], yerr=sem_3, label='continuous', marker='o', markersize=2.0, color='red')
 
 
@@ -236,7 +236,7 @@ def plotHistogram(experiment, num_bins):
 
         dots = ax.scatter(x_1, raw_1[:,i], color = 'grey', alpha = 0.2)
         jitter_dots(dots, base_x=x_1 - offset)
-        dots = ax.scatter(x_2, raw_2[:,i], color = 'pink', alpha = 0.2)
+        dots = ax.scatter(x_2, raw_2[:,i], color = 'green', alpha = 0.2)
         jitter_dots(dots, base_x=x_2)
         dots = ax.scatter(x_3, raw_3[:, i], color='red', alpha=0.2)
         jitter_dots(dots, base_x=x_3)

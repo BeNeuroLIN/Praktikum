@@ -207,11 +207,11 @@ def plotHistogram(experiment, prob=False):
     f, ax = plt.subplots()
 
     ax.plot(x_vals, first_1, label='control', color='black')
-    ax.plot(x_vals, first_2, label='1h lightpulse, 2500 lux', color='pink')
+    ax.plot(x_vals, first_2, label='light pulses', color='green')
     ax.plot(x_vals, first_3, label='continuous', color='red')
 
     plt.fill_between(x_vals, first_1-sem_first_1, first_1+sem_first_1, alpha=0.3, color='grey')
-    plt.fill_between(x_vals, first_2-sem_first_2, first_2+sem_first_2, alpha=0.3, color='pink')
+    plt.fill_between(x_vals, first_2-sem_first_2, first_2+sem_first_2, alpha=0.3, color='green')
     plt.fill_between(x_vals, first_3 - sem_first_3, first_3 + sem_first_3, alpha=0.3, color='red')
 
     ax.set_xlabel(f'Time (ms)')
@@ -241,7 +241,7 @@ def plotHistogram(experiment, prob=False):
     #Paula
     #plot bargraph
     ax.bar(1,mean_1,capsize=0.5, yerr=mean_sem_1, label='control', alpha=0.5, width=0.08, color='grey')
-    ax.bar(1.1,mean_2, yerr=mean_sem_2, capsize=0.5, label='1h light pulse, 2500lux', alpha=0.7, width=0.08, color='pink')
+    ax.bar(1.1,mean_2, yerr=mean_sem_2, capsize=0.5, label='light pulse', alpha=0.7, width=0.08, color='green')
     ax.bar(1.2, mean_3, yerr=mean_sem_3, capsize=0.5, label='continuous', alpha=0.7, width=0.08, color='red')
 
     x_1 = [1] * raw_1.shape[0]
@@ -251,7 +251,7 @@ def plotHistogram(experiment, prob=False):
 
     dots = ax.scatter(x_1, raw_1*1000, color = 'grey',  alpha = 0.4)
     jitter_dots(dots)
-    dots = ax.scatter(x_2, raw_2*1000, color = 'pink', alpha = 0.4)
+    dots = ax.scatter(x_2, raw_2*1000, color = 'green', alpha = 0.4)
     jitter_dots(dots)
     dots = ax.scatter(x_3, raw_3 * 1000, color='red', alpha=0.4)
     jitter_dots(dots)
